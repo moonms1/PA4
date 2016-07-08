@@ -1,0 +1,76 @@
+<template name="home">
+<div id="jumbotron">
+    <img id="image" src="http://cfile5.uf.tistory.com/image/2147E14D54EE683B060722" width="90%"/>
+    <p id="text">
+<h1 style="color:white;">Become A Sphynx</h1>
+  <p style="color:white;">Welcome to the Sphynx Quiz App</p>
+  <!-- <p><a class="btn btn-primary btn-lg" href="{{pathFor 'about'}}" role="button">Learn more</a></p> -->
+  <p><a class="btn btn-primary btn-lg" href="{{pathFor 'showLists'}}" role="button">Your Lists</a></p>
+{{#if currentUser}}
+<div class="alert">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  Your logged in. Find 'x' and click to close message.
+</div>
+<!-- <h4>{{settingsData.greeting}} You're logged in!</h4> -->
+
+    <body>
+      <div class="jumbotron text-center">
+
+    <h2>Create New Question</h2>
+
+
+    <div class="col-xs-4">
+    <label for="ex3">Question:</label>
+    <input class="js-name" id="ex3" type="text">
+    </div>
+
+ <div class="col-xs-4">
+    <labelx3">Answer:</label>
+    <input class="js-items" id="ex3" type="text">
+ </div>
+
+    <button class="js-submitList btn btn-default"> Submit</button>
+
+  </div>
+</body>
+
+    <br>
+    <br>
+
+{{else}}
+  <body>
+    <div class="container-fluid bg-1 text-center">
+      <h3>Have a list of things you wish to complete?</h3>
+      <br>
+      <br>
+      <h3>Start here!</h3>
+      <br>
+      <br>
+      <h3>But first, you must logged in.</h3>
+      <br>
+      <!-- <button class="js-login btn btn-info" > <strong>Login/Register</strong></button> -->
+    </div>
+  </body>
+
+    <style>
+    .bg-1 {
+      background-color: #ffffff; /* White */
+      color: #555555;
+    }
+    </style>
+  {{/if}}
+  <br>
+  <!-- <div class="{{theColor}}">
+  <select class = "js-color">
+    <option>bg-info</option>
+    <option>bg-warning</option>
+  </select>
+  Color: {{theColor}}<br>
+
+  Counter: {{theCounter}}<br>
+  <button class="js-counter"> Push me </button>
+</div> -->
+    </p>
+</div>
+
+</template>

@@ -1,0 +1,78 @@
+<template name="home">
+<div id="jumbotron">
+    <img id="image" src="http://cfile5.uf.tistory.com/image/2147E14D54EE683B060722" width="90%"/>
+    <p id="text">
+  <!-- <p><a class="btn btn-primary btn-lg" href="{{pathFor 'about'}}" role="button">Learn more</a></p> -->
+{{#if currentUser}}
+<h2 style="color:white;">Well Done.</h2>
+<h3 style="color:white;">Here is my quiz, find the 'x' from the page and click to remove my riddle.</h3>
+<div class="alert">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+<h3> Pronounced as one letter,</h3> 
+<h3>And written with three, </h3>
+<h3>Two letters there are, </h3>
+<h3>And two only in me. </h3>
+<h3>I'm double, I'm single, </h3>
+<h3>I'm black, blue, and gray, </h3>
+<h3>I'm read from both ends, </h3>
+<h3>And the same e </h3>
+<h3>What am I?</h3> 
+</div>
+
+    <body>
+      <div class="jumbotron text-center">
+    <h2>Create New Question</h2>
+    <div class="col-xs-4">
+    <label for="ex3">Question:</label>
+    <input class="js-name" id="ex3" type="text">
+    </div>
+
+ <div class="col-xs-4">
+    <label for="ex3">Answer:</label>
+    <input class="js-items" id="ex3" type="text">
+ </div>
+
+    <button class="js-submitList btn btn-default"> Submit</button>
+
+  </div>
+</body>
+
+    <br>
+
+    <br>
+
+{{else}}
+<h1 style="color:white;">Become A Sphynx </h1>
+  <p style="color:white;">Welcome to Sphynx Quiz App!</p>
+  <body>
+    <div class="container-fluid bg-1 text-center">
+      <h3>Want to challenge me in riddles?</h3>
+      <br>
+      <h3>But you must logged in first.</h3>
+      <br>
+      <!-- <button class="js-login btn btn-info" > <strong>Login/Register</strong></button> -->
+    </div>
+  </body>
+
+    <style>
+    .bg-1 {
+      background-color: #ffffff; /* White */
+      color: #555555;
+    }
+    </style>
+  {{/if}}
+  <br>
+  <!-- <div class="{{theColor}}">
+  <select class = "js-color">
+    <option>bg-info</option>
+    <option>bg-warning</option>
+  </select>
+  Color: {{theColor}}<br>
+
+  Counter: {{theCounter}}<br>
+  <button class="js-counter"> Push me </button>
+</div> -->
+    </p>
+</div>
+
+</template>

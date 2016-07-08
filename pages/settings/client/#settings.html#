@@ -1,0 +1,32 @@
+<template name="settings">
+  <h1 style="background-color:beige"> My Profile</h1>
+<h3>Enter your information:</h3>
+{{#if currentUser}}
+<form>
+  <div class="form-group">
+    <label>Firstname</label>
+   <input type="text"  class="js-getfirstname form-control" placeholder="John">
+  </div>
+  <div class="form-group">
+  <label>Lastname</label>
+  <input type="text"  class="js-getlastname form-control" placeholder="Snow">
+ </div>
+ <div class="form-group">
+  <label>Nickname</label>
+  <input type="text"  class="js-getnickname form-control" placeholder="Bastard">
+ </div>
+</form>
+<button class="btn btn-primary js-submit">Submit</button>
+{{else}}
+<h2 class="text-center">Must log in first</h2>
+{{/if}}
+
+
+<ul>
+{{#each u in userSetting}}
+<li>name : {{u.first}} {{u.last}} </li>
+<li>nick name :{{u.nick}} </li>
+{{/each}}
+</ul>
+
+</template>

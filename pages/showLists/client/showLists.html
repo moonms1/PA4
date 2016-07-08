@@ -1,0 +1,30 @@
+<template name="showLists">
+  <h1>Quizzes</h1>
+<img src="http://gifyu.com/image/ant"/>
+  Find Quiz: <input type="text" class="js-list">
+  <button class="js-find-list btn btn-default"> Search</button>
+
+  <hr>
+
+  <ul class="list-group">
+    {{#each r in listData}}
+      {{> listRow list = r}}
+    {{/each}}
+  </ul>
+</template>
+
+
+<template name = "listRow">
+  <li class="list-group-item">
+    <a href="/showLists/{{list._id}}">{{list.name}}</a>
+
+    <span class = "js-delete-list glyphicon glyphicon-trash" aria-hidden ="true"></span>
+</li>
+  <br>
+</template>
+
+<template name = "selectedList">
+  <h3>{{name}}</h3>
+  <hr>
+    <li><a href="https://google.com/#q={{items}}">{{items}}</a> click to search on google.</li>
+</template>

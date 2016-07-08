@@ -1,0 +1,32 @@
+<template name="layout">
+
+  <nav class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="{{pathFor 'home'}}">
+          <span class="glyphicon glyphicon-home"></span>
+        </a></li>
+        <li role="presentation"><a href="{{pathFor 'about'}}">About</a></li>
+        <li role="presentation"><a href="{{pathFor 'showLists'}}">Quiz List</a></li>
+        <li role="presentation"><a href="{{pathFor 'comments'}}">Comments</a></li>
+        <li role="presentation"><a href="{{pathFor 'contact'}}">Contact</a></li>
+        <!-- <li role="presentation"><a href="{{pathFor 'archive'}}">Archive</a></li> -->
+        <!-- <li role="presentation"><a href="{{pathFor 'draw'}}">Draw</a></li> -->
+        <!-- <li role="presentation"><a href="{{pathFor 'testing'}}">Test</a></li> -->
+
+        <li role="presentation"><a href="{{pathFor 'settings'}}">Profile</a></li>
+
+        <!-- <ul class="nav navbar-default navbar-right">
+          <li role="presentation"><a href="{{pathFor 'login'}}">Login/Register</a></li>
+        </ul> -->
+
+        <ul class="nav navbar-default navbar-right">
+            {{> loginButtons}}
+        </ul>
+      </ul>
+      {{>yield}}
+
+    </div>
+</nav>
+
+  </template>

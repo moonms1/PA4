@@ -1,3 +1,9 @@
+Meteor.publish("theUserBio",
+function(){
+return userBio.find();
+})
+
+
 Meteor.publish("theComments",
   function(){return Comments.find();})
 

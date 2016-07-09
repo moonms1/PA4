@@ -1,24 +1,39 @@
 <template name="showLists">
-  <h1>Quizzes</h1>
-<img src="http://gifyu.com/image/ant"/>
-  Find Quiz: <input type="text" class="js-list">
-  <button class="js-find-list btn btn-default"> Search</button>
+ <h1>Here are the list of riddles</h1>
+<body>
+      <div class="container-fluid bg-1 text-center">
+    <div class="jumbotron">
+<h2>Post Your Riddle</h2>
+    <div class="col-s-1">
+    <label for="ex3">Type Question</label>
+    <input class="js-name" id="ex3" type="text">
+    </div>
 
-  <hr>
-
+    <div class="col-s-5">
+    <label for="ex3">Input Answer</label>
+    <input class="js-items" id="ex3" type="text">
+  </div>
+    <button class="js-submitList btn btn-default"> Post</button>
+  </div>
+</div>
+</body>
+ <hr>
+Click on the question to see the answer.
+<hr>
   <ul class="list-group">
     {{#each r in listData}}
       {{> listRow list = r}}
     {{/each}}
   </ul>
 </template>
-
-
-<template name = "listRow">
+<template name="listRow">
   <li class="list-group-item">
     <a href="/showLists/{{list._id}}">{{list.name}}</a>
 
     <span class = "js-delete-list glyphicon glyphicon-trash" aria-hidden ="true"></span>
+   <div> {{theCounter}}
+    <button class="js-pusher glyphicon glyphicon-thumbs-up"></button><br>
+    </div>
 </li>
   <br>
 </template>

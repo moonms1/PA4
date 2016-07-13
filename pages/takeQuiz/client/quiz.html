@@ -1,45 +1,22 @@
 <template name="takeQuiz">
-<p class="question">1. What is the answer to this question?</p>        
+<div class="container">
+<br><br><br>
 
-<ul class="answers">            
-<input type="radio" name="q1" value="a" id="q1a"><label for="q1a">Answer 1</label><br/>          
-<input type="radio" name="q1" value="b" id="q1b"><label for="q1b">Answer 2</label><br/>            
-<input type="radio" name="q1" value="c" id="q1c"><label for="q1c">Answer 3</label><br/>            
-<input type="radio" name="q1" value="d" id="q1d"><label for="q1d">Answer 4</label><br/>       
-</ul>        
-
-
-<p class="question">2. What is the answer to this question?</p>        
-
-<ul class="answers">            
-<input type="radio" name="q2" value="a" id="q2a"><label for="q2a">Answer 1</label><br/>           
-<input type="radio" name="q2" value="b" id="q2b"><label for="q2b">Answer 2</label><br/>            
-<input type="radio" name="q2" value="c" id="q2c"><label for="q2c">Answer 3</label><br/>           
-<input type="radio" name="q2" value="d" id="q2d"><label for="q2d">Answer 4</label><br/>       
-</ul>        
-
-
-<br/>
-<div id="results">            
-Show me the answers!       
-</div>                
-
-<div id="category1">            
-<p>              
-<strong>Question 1:</strong> The correct answer is the <strong>Answer 1</strong>.</p>        
-</div>        
-
-<div id="category2">            
-<p>              
-<strong>Question 2:</strong> The correct answer is <strong>Answer 2</strong>.</p>        
-</div>        
-
-
-
-<div id="category11">            
-<p>                
-You answered them all right!</p>        
+<div id="carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+    <li data-target="#carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel" data-slide-to="1"></li>
+    <li data-target="#carousel" data-slide-to="2"></li>
+   <li data-target="#carousel" data-slide-to="3"></li>
+    <li data-target="#carousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div class="item active"><img src="http://propensityforcuriosity.com/blog/wp-content/uploads/2015/04/tricky-riddle-3.png"></div>
+      <div class="item"><img src="http://propensityforcuriosity.com/blog/wp-content/uploads/2015/04/tricky-riddle-1.png"></div>
+      <div class="item"><img src="http://propensityforcuriosity.com/blog/wp-content/uploads/2015/04/tricky-riddle-2.png"></div>
+      <div class="item active"><img src="http://propensityforcuriosity.com/blog/wp-content/uploads/2015/04/tricky-riddle-4.png"></div>
+      <div class="item active"><img src="http://propensityforcuriosity.com/blog/wp-content/uploads/2015/04/tricky-riddle-5.png"></div>
+    </div>
+  </div>
 </div>
-
-
 </template>
